@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>compound and simple interest</title>
+        <style type="text/css">
+        body{
+            background-color:powderblue
+        }
+        .heading{
+            font-size:60px
+        }
+        </style>
+        <script type="text/javascript" charset="utf-8">
+      // for compound interest
+            var p=100000;
+            var r=0.025;
+            var n=12;
+            var t=2;
+            var a= p*(1+r/n)^n*t;
+            console.log (a, "for compound interest");
+            // for simple interest
+            p =100000;
+            r =0.1;
+            t =2;
+            a = p*(1+r*t);
+            console.log(a, "for simple interest");
+        </script>
+    </head>
+    <body>
+
+<h1 class="heading" onclick="console.log('Financial freedom is our goal')"> Compound and simple interest for the loan requested by Joseph</h1>
+
+    </body>
+</html>
