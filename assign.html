@@ -8,18 +8,23 @@
 
     <script type= text/javascript charset= utf-8>
         //to calculate the time it will take to get to mars
+        //convert distance to meters
         var distance= 151920000;
-        var velocity= 1000;
-        var timeofflight= distance/velocity;
-        document.write("the time of flight to get to mars="+""+timeofflight+"hours");
-        //to calculate the total time to be spent in mars multiply the number of days to complete a revolution by 24
-        var timespent= 687 * 24;
-        document.write("total hours to be spent in mars="+""+timespent+"hours");
+        var distanceinmeters= distance * 1000
+        document.write("distance="+""+distanceinmeters+"meters")
+        //convert velocity to m/s
+       var velocity= (1000*5)/18
+       document.write("velocity="+""+velocity+"m/s")
+        var timeofflight= distanceinmeters/ velocity
+        document.write("the time of flight to get to mars="+""+timeofflight+"seconds");
+        //it takes 24 hours 39 minutes 35 seconds for mars to complete a rotation
+        var timespent=88775;
+        document.write("total time to be spent in mars="+""+timespent+"seconds");
         //to calculate the total time of the trip we add time of flight and time to be spent in mars
         var totaltime= timeofflight+timespent;
-        document.write("total time for the trip="+""+totaltime+"hours");
-        //if one litre of oxygen will last for twelve hours therefore the number of litres needed by one astronaut for the trip is the total time divided by 12
-        var numberoflitres= totaltime / 12;
+        document.write("total time for the trip="+""+totaltime+"seconds");
+        //if one litre of oxygen will last for twelve hours and 12 hours is equal to 12*3600 =43200
+        var numberoflitres= totaltime / 43200;
         document.write("number of litres required for each astronaut="+""+numberoflitres+"litres");
         //to calculate the number of litres asuming there are five astronauts we multiply number of litres for each by 5
         var totallitres= numberoflitres * 5;
